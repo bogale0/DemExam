@@ -6,31 +6,7 @@
         xmlns:local="clr-namespace:WpfApp15"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Margin="10">
-        <TabControl>
-            <TabItem Header="Студенты">
-                <DockPanel>
-                    <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,10,0,10">
-                        <Button x:Name="AddStudentBtn" Content="Добавить" Width="100" Margin="0,0,5,0" Click="AddStudentBtn_Click"/>
-                        <Button x:Name="DeleteStudentBtn" Content="Удалить" Width="100" Click="DeleteStudentBtn_Click"/>
-                    </StackPanel>
-                    <DataGrid x:Name="StudentsGrid" AutoGenerateColumns="True" IsReadOnly="False"/>
-                </DockPanel>
-            </TabItem>
-
-            <TabItem Header="Оценки">
-                <DockPanel>
-                    <Button x:Name="AddGradeBtn" Content="Добавить оценку" Width="150" DockPanel.Dock="Top" Margin="0,10,0,10" Click="AddGradeBtn_Click"/>
-                    <DataGrid x:Name="GradesGrid" AutoGenerateColumns="True" IsReadOnly="False"/>
-                </DockPanel>
-            </TabItem>
-
-            <TabItem Header="Посещаемость">
-                <DockPanel>
-                    <Button x:Name="AddAttendanceBtn" Content="Отметить посещение" Width="180" DockPanel.Dock="Top" Margin="0,10,0,10" Click="AddAttendanceBtn_Click"/>
-                    <DataGrid x:Name="AttendanceGrid" AutoGenerateColumns="True" IsReadOnly="False"/>
-                </DockPanel>
-            </TabItem>
-        </TabControl>
+    <Grid>
+        
     </Grid>
 </Window>
