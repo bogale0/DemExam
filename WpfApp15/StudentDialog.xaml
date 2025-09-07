@@ -1,0 +1,39 @@
+﻿<Window x:Class="WpfApp15.StudentDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp15"
+        mc:Ignorable="d"
+        Title="Студент" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="260"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Фамилия:" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="TbLastName" Grid.Row="0" Grid.Column="1" Margin="4"/>
+
+        <TextBlock Text="Имя:" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="TbFirstName" Grid.Row="1" Grid.Column="1" Margin="4"/>
+
+        <TextBlock Text="Дата рожд.:" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+        <DatePicker x:Name="DpDob" Grid.Row="2" Grid.Column="1" Margin="4"/>
+
+        <TextBlock Text="E-mail:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="TbEmail" Grid.Row="3" Grid.Column="1" Margin="4"/>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0 8 0 0">
+            <Button Content="OK" Width="80" Margin="0 0 8 0" Click="Ok_Click"/>
+            <Button Content="Отмена" Width="80" Click="Cancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

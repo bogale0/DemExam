@@ -5,8 +5,87 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp15"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Система учёта студентов" Height="600" Width="900">
+    <DockPanel Margin="8">
+        <TextBlock Text="Система учёта студентов" FontSize="18" FontWeight="SemiBold" DockPanel.Dock="Top" Margin="0 0 0 8"/>
+        <TabControl x:Name="MainTab">
+            <!-- Students -->
+            <TabItem Header="Студенты">
+                <Grid Margin="6">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0 0 0 6">
+                        <Button x:Name="BtnAddStudent" Content="Добавить" Width="90" Margin="0 0 6 0" Click="BtnAddStudent_Click"/>
+                        <Button x:Name="BtnEditStudent" Content="Редактировать" Width="100" Margin="0 0 6 0" Click="BtnEditStudent_Click"/>
+                        <Button x:Name="BtnDeleteStudent" Content="Удалить" Width="90" Click="BtnDeleteStudent_Click"/>
+                    </StackPanel>
+
+                    <DataGrid x:Name="StudentsGrid" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="60"/>
+                            <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}" Width="*"/>
+                            <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}" Width="*"/>
+                            <DataGridTextColumn Header="Дата рожд." Binding="{Binding DateOfBirth, StringFormat=d}" Width="130"/>
+                            <DataGridTextColumn Header="E-mail" Binding="{Binding Email}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+
+            <!-- Grades -->
+            <TabItem Header="Оценки">
+                <Grid Margin="6">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0 0 0 6">
+                        <Button x:Name="BtnAddGrade" Content="Добавить" Width="90" Margin="0 0 6 0" Click="BtnAddGrade_Click"/>
+                        <Button x:Name="BtnEditGrade" Content="Редактировать" Width="100" Margin="0 0 6 0" Click="BtnEditGrade_Click"/>
+                        <Button x:Name="BtnDeleteGrade" Content="Удалить" Width="90" Click="BtnDeleteGrade_Click"/>
+                    </StackPanel>
+
+                    <DataGrid x:Name="GradesGrid" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="60"/>
+                            <DataGridTextColumn Header="Студент" Binding="{Binding StudentFullName}" Width="200"/>
+                            <DataGridTextColumn Header="Предмет" Binding="{Binding Subject}" Width="*"/>
+                            <DataGridTextColumn Header="Оценка" Binding="{Binding Score}" Width="80"/>
+                            <DataGridTextColumn Header="Дата" Binding="{Binding GradeDate, StringFormat=d}" Width="120"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+
+            <!-- Attendance -->
+            <TabItem Header="Посещаемость">
+                <Grid Margin="6">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0 0 0 6">
+                        <Button x:Name="BtnAddAttendance" Content="Добавить" Width="90" Margin="0 0 6 0" Click="BtnAddAttendance_Click"/>
+                        <Button x:Name="BtnEditAttendance" Content="Редактировать" Width="100" Margin="0 0 6 0" Click="BtnEditAttendance_Click"/>
+                        <Button x:Name="BtnDeleteAttendance" Content="Удалить" Width="90" Click="BtnDeleteAttendance_Click"/>
+                    </StackPanel>
+
+                    <DataGrid x:Name="AttendanceGrid" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id" Binding="{Binding Id}" Width="60"/>
+                            <DataGridTextColumn Header="Студент" Binding="{Binding StudentFullName}" Width="200"/>
+                            <DataGridTextColumn Header="Дата" Binding="{Binding AttendanceDate, StringFormat=d}" Width="120"/>
+                            <DataGridCheckBoxColumn Header="Присутствие" Binding="{Binding IsPresent, Mode=OneWay}" Width="100"/>
+                            <DataGridTextColumn Header="Примечание" Binding="{Binding Note}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
 </Window>
