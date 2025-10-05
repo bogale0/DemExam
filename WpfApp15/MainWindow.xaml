@@ -9,7 +9,6 @@
     <DockPanel Margin="8">
         <TextBlock Text="Система учёта студентов" FontSize="18" FontWeight="SemiBold" DockPanel.Dock="Top" Margin="0 0 0 8"/>
         <TabControl x:Name="MainTab">
-            <!-- Students -->
             <TabItem Header="Студенты">
                 <Grid Margin="6">
                     <Grid.RowDefinitions>
@@ -18,9 +17,9 @@
                     </Grid.RowDefinitions>
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0 0 0 6">
-                        <Button x:Name="BtnAddStudent" Content="Добавить" Width="90" Margin="0 0 6 0" Click="BtnAddStudent_Click"/>
-                        <Button x:Name="BtnEditStudent" Content="Редактировать" Width="100" Margin="0 0 6 0" Click="BtnEditStudent_Click"/>
-                        <Button x:Name="BtnDeleteStudent" Content="Удалить" Width="90" Click="BtnDeleteStudent_Click"/>
+                        <Button x:Name="BtnAddStudent" Content="Добавить" Margin="0 0 6 0" Click="BtnAddStudent_Click"/>
+                        <Button x:Name="BtnEditStudent" Content="Редактировать" Margin="0 0 6 0" Click="BtnEditStudent_Click"/>
+                        <Button x:Name="BtnDeleteStudent" Content="Удалить" Click="BtnDeleteStudent_Click"/>
                     </StackPanel>
 
                     <DataGrid x:Name="StudentsGrid" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single">
@@ -35,7 +34,6 @@
                 </Grid>
             </TabItem>
 
-            <!-- Grades -->
             <TabItem Header="Оценки">
                 <Grid Margin="6">
                     <Grid.RowDefinitions>
@@ -44,9 +42,9 @@
                     </Grid.RowDefinitions>
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0 0 0 6">
-                        <Button x:Name="BtnAddGrade" Content="Добавить" Width="90" Margin="0 0 6 0" Click="BtnAddGrade_Click"/>
-                        <Button x:Name="BtnEditGrade" Content="Редактировать" Width="100" Margin="0 0 6 0" Click="BtnEditGrade_Click"/>
-                        <Button x:Name="BtnDeleteGrade" Content="Удалить" Width="90" Click="BtnDeleteGrade_Click"/>
+                        <Button x:Name="BtnAddGrade" Content="Добавить" Margin="0 0 6 0" Click="BtnAddGrade_Click"/>
+                        <Button x:Name="BtnEditGrade" Content="Редактировать" Margin="0 0 6 0" Click="BtnEditGrade_Click"/>
+                        <Button x:Name="BtnDeleteGrade" Content="Удалить" Click="BtnDeleteGrade_Click"/>
                     </StackPanel>
 
                     <DataGrid x:Name="GradesGrid" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single">
@@ -61,7 +59,6 @@
                 </Grid>
             </TabItem>
 
-            <!-- Attendance -->
             <TabItem Header="Посещаемость">
                 <Grid Margin="6">
                     <Grid.RowDefinitions>
@@ -70,9 +67,9 @@
                     </Grid.RowDefinitions>
 
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0 0 0 6">
-                        <Button x:Name="BtnAddAttendance" Content="Добавить" Width="90" Margin="0 0 6 0" Click="BtnAddAttendance_Click"/>
-                        <Button x:Name="BtnEditAttendance" Content="Редактировать" Width="100" Margin="0 0 6 0" Click="BtnEditAttendance_Click"/>
-                        <Button x:Name="BtnDeleteAttendance" Content="Удалить" Width="90" Click="BtnDeleteAttendance_Click"/>
+                        <Button x:Name="BtnAddAttendance" Content="Добавить" Margin="0 0 6 0" Click="BtnAddAttendance_Click"/>
+                        <Button x:Name="BtnEditAttendance" Content="Редактировать" Margin="0 0 6 0" Click="BtnEditAttendance_Click"/>
+                        <Button x:Name="BtnDeleteAttendance" Content="Удалить" Click="BtnDeleteAttendance_Click"/>
                     </StackPanel>
 
                     <DataGrid x:Name="AttendanceGrid" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single">

@@ -25,7 +25,7 @@ namespace WpfApp15
         public MainWindow()
         {
             InitializeComponent();
-            _ctx = new StudentDbContext(); // предполагается: EF6 контекст с конструктором по умолчанию
+            _ctx = new StudentDbContext();
             LoadAll();
         }
 
@@ -44,7 +44,6 @@ namespace WpfApp15
 
         private void LoadGrades()
         {
-            // Загрузим оценки и соберем имя студента для отображения
             var list = _ctx.Grades
                 .Join(_ctx.Students,
                       g => g.StudentId,

@@ -23,7 +23,6 @@ namespace WpfApp15
         public Grades Grade { get; private set; }
         private List<dynamic> _studentsForCombo;
 
-        // Для добавления
         public GradeDialog(List<Students> students)
         {
             InitializeComponent();
@@ -31,7 +30,6 @@ namespace WpfApp15
             PrepareStudents(students);
         }
 
-        // Для редактирования
         public GradeDialog(List<Students> students, Grades existing)
         {
             InitializeComponent();
@@ -44,7 +42,6 @@ namespace WpfApp15
 
         private void PrepareStudents(List<Students> students)
         {
-            // Создаем временные объекты с FullName для ComboBox
             _studentsForCombo = students.Select(s => (dynamic)new { Id = s.Id, FullName = s.LastName + " " + s.FirstName }).ToList();
             CbStudents.ItemsSource = _studentsForCombo;
         }

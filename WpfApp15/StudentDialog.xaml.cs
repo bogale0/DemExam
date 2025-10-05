@@ -21,7 +21,6 @@ namespace WpfApp15
     {
         public Students Student { get; private set; }
 
-        // Для добавления
         public StudentDialog()
         {
             InitializeComponent();
@@ -29,7 +28,6 @@ namespace WpfApp15
             DataContext = Student;
         }
 
-        // Для редактирования
         public StudentDialog(Students existing) : this()
         {
             Student = existing;
@@ -42,7 +40,6 @@ namespace WpfApp15
 
         private void Ok_Click(object sender, RoutedEventArgs e)
         {
-            // Простая валидация
             if (string.IsNullOrWhiteSpace(TbLastName.Text) || string.IsNullOrWhiteSpace(TbFirstName.Text))
             {
                 MessageBox.Show("Имя и фамилия обязательны.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Warning);
