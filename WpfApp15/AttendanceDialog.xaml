@@ -29,9 +29,9 @@
         </StackPanel>
 
         <TextBlock Text="Примечание:" Grid.Row="3" Grid.Column="0" VerticalAlignment="Top" Margin="0 6 0 0"/>
-        <TextBox x:Name="TbNote" Grid.Row="3" Grid.Column="1" Margin="4" Height="20" AcceptsReturn="True" TextWrapping="Wrap"/>
+        <TextBox x:Name="TbNote" Grid.Row="3" Grid.Column="1" Margin="0,0,0,35" Height="50" AcceptsReturn="True" TextWrapping="Wrap"/>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0 70 0 0">
+        <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0 60 0 0">
             <Button Content="OK" Width="80" Margin="0 0 8 0" Click="Ok_Click"/>
             <Button Content="Отмена" Width="80" Click="Cancel_Click"/>
         </StackPanel>
